@@ -1,7 +1,11 @@
-export default function Visor(){
+interface Visor {
+    value: number;
+}
+
+export default function Visor(props:Visor) {
     return (
     <div className={"container bg-white text-slate-800 text-5xl text-center"}>
-        2+2
+        <p>{props.value}</p>
     </div>
     )
 }
