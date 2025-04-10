@@ -1,5 +1,5 @@
 interface Visor {
-    value: number;
+    value: string;
 }
 
 export default function Visor(props:Visor) {
