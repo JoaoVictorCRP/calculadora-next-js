@@ -30,7 +30,7 @@ export default function Home() {
 
         console.log(val+input);
         if(input=='0'){
-            setInput((prev)=>val);
+            setInput(val);
         } else {
             setInput((prev) => prev+val);
         }
