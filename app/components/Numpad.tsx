@@ -14,7 +14,7 @@ const buttons = [
 
 export const Numpad: React.FC<NumpadProps> = ({ onInput }) => {
     return (
-        <div className="grid grid-cols-4 gap-4 p-4 bg-white dark:bg-gray-900 rounded-3xl shadow-lg max-w-2xl h-screen mx-auto">
+        <div className="grid grid-cols-4 gap-4 p-4 bg-white dark:bg-gray-900 rounded-3xl shadow-lg max-w-2xl h-full mx-auto">
             {buttons.flat().map((btn, i) => (
                 <NumpadButton key={i} label={btn} onClick={onInput}/>
             ))}
