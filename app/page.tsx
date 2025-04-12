@@ -3,9 +3,12 @@ import Visor from "@/app/components/Visor";
 import {Numpad} from "@/app/components/Numpad";
 import {useState} from "react";
 import Swal from "sweetalert2";
+import Title from "@/app/components/Title";
+
 
 export default function Home() {
     const [input, setInput] = useState('0');
+
 
     const handleInput = (val: string) => {
         if (val=='=') {
@@ -82,8 +85,9 @@ export default function Home() {
 
     return (
     <div>
-        <Visor value={input}/>
-        <Numpad onInput={handleInput}/>
+            <Title/>
+            <Visor value={input}/>
+            <Numpad onInput={handleInput}/>
     </div>
   );
 }
