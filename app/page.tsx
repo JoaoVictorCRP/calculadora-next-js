@@ -4,6 +4,7 @@ import {Numpad} from "@/app/components/Numpad";
 import {useState} from "react";
 import Swal from "sweetalert2";
 import Title from "@/app/components/Title";
+import Footer from "@/app/components/Footer";
 
 
 export default function Home() {
@@ -85,9 +86,10 @@ export default function Home() {
 
     return (
     <div>
-            <Title/>
-            <Visor value={input}/>
-            <Numpad onInput={handleInput}/>
+        <Title/>
+        <Visor value={input}/>
+        <Numpad onInput={handleInput}/>
+        <Footer/>
     </div>
   );
 }
