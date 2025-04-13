@@ -13,12 +13,14 @@ export default function Home() {
 
     const handleInput = (val: string) => {
         if (val=='=') {
-            // Substitui todas as ocorrências de "√" seguido de número ou expressão (ex: √9, √(9+1), etc.)
-            const processedInput = input.replace(/√(\d+(\.\d+)?|\([^)]+\))/g, (_, expr) => {
+            console.log(typeof input)
+            // √ → Math.sqrt()
+            let processedInput = input.replace(/√(\d+(\.\d+)?|\([^)]+\))/g, (_, expr) => {
                 return `Math.sqrt(${expr})`;
             });
 
-            const result= eval(processedInput);
+            console.log(processedInput);
+            const result = eval(processedInput).toString();
 
             if (result===Infinity) { // previnir divisão por zero com o sweetalert
                 Swal.fire({
@@ -47,8 +49,8 @@ export default function Home() {
             return;
         }
 
-        if (val=='÷'){
-            setInput((prev) => prev + '/');
+        if (val=='MOD'){
+            setInput((prev) => prev + '%');
             return;
         }
 
